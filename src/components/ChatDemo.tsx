@@ -52,10 +52,10 @@ export const ChatDemo: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300 }}
             >
                 <div className="flex items-center mb-4">
-                    <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center mr-3">
+                    <div className="w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center mr-3">
                         <Brain className="w-4 h-4 text-white" />
                     </div>
-                    <span className="font-semibold text-gray-800">Ask AI Lawyer</span>
+                    <span className="font-semibold text-gray-800">Aupa AI</span>
                 </div>
 
                 <div className="space-y-3 max-h-64 overflow-y-auto">
@@ -70,7 +70,7 @@ export const ChatDemo: React.FC = () => {
                             >
                                 <div
                                     className={`max-w-xs p-3 rounded-lg ${msg.type === 'user'
-                                        ? 'bg-black text-white'
+                                        ? 'bg-blue-900 text-white'
                                         : 'bg-gray-100 text-gray-800'
                                         }`}
                                 >
@@ -126,11 +126,11 @@ export const ChatDemo: React.FC = () => {
                 </div>
 
                 <motion.button
-                    className="w-full mt-4 bg-black text-white py-2 rounded-lg font-medium"
+                    className="w-full mt-4 bg-blue-900 text-white py-2 rounded-lg font-medium"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                 >
-                    Try Ask Apua AI
+                    Try Aupa AI
                 </motion.button>
             </motion.div>
         </motion.div>

@@ -6,7 +6,7 @@ const testimonials = [
     {
         name: 'Sarah Mitchell',
         role: 'Senior Partner, Mitchell & Associates',
-        content: 'Ask AI Lawyer has revolutionized our legal research process. What used to take hours now takes minutes, and the accuracy is remarkable.',
+        content: 'Aupa AI has revolutionized our legal research process. What used to take hours now takes minutes, and the accuracy is remarkable.',
         rating: 5,
         avatar: 'SM'
     },
@@ -51,7 +51,7 @@ export const TestimonialCarousel: React.FC = () => {
                 {testimonials.map((_, index) => (
                     <motion.button
                         key={index}
-                        className={`w-3 h-3 rounded-full mx-2 ${index === currentIndex ? 'bg-black' : 'bg-gray-300'
+                        className={`w-3 h-3 rounded-full mx-2 ${index === currentIndex ? 'bg-blue-900' : 'bg-gray-300'
                             }`}
                         whileHover={{ scale: 1.2 }}
                         onClick={() => setCurrentIndex(index)}
@@ -70,11 +70,11 @@ export const TestimonialCarousel: React.FC = () => {
                         className="absolute inset-0 bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
                     >
                         <div className="flex items-center mb-6">
-                            <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                                 {testimonials[currentIndex].avatar}
                             </div>
                             <div>
-                                <h4 className="font-bold text-black text-lg">
+                                <h4 className="font-bold text-blue-900 text-lg">
                                     {testimonials[currentIndex].name}
                                 </h4>
                                 <p className="text-gray-600">
@@ -91,7 +91,7 @@ export const TestimonialCarousel: React.FC = () => {
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: i * 0.1 }}
                                 >
-                                    <Star className="h-5 w-5 text-black fill-current" />
+                                    <Star className="h-5 w-5 text-blue-900 fill-current" />
                                 </motion.div>
                             ))}
                         </div>
@@ -111,7 +111,7 @@ export const TestimonialCarousel: React.FC = () => {
             <div className="flex justify-between mt-8">
                 <motion.button
                     onClick={prevTestimonial}
-                    className="p-3 rounded-full bg-black text-white hover:bg-gray-800 transition-colors"
+                    className="p-3 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
@@ -120,7 +120,7 @@ export const TestimonialCarousel: React.FC = () => {
 
                 <motion.button
                     onClick={nextTestimonial}
-                    className="p-3 rounded-full bg-black text-white hover:bg-gray-800 transition-colors"
+                    className="p-3 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >

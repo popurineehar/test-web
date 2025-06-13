@@ -33,14 +33,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             style={{ transformStyle: 'preserve-3d' }}
         >
             <motion.div
-                className="text-black mb-6"
+                className="text-blue-900 mb-6"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
                 <Icon className="h-12 w-12" />
             </motion.div>
 
-            <h3 className="text-2xl font-bold text-black mb-4 group-hover:text-gray-800 transition-colors">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 group-hover:text-blue-800 transition-colors">
                 {title}
             </h3>
 
@@ -58,7 +58,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                         className="flex items-center text-gray-700"
                     >
                         <motion.div
-                            className="w-2 h-2 bg-black rounded-full mr-3"
+                            className="w-2 h-2 bg-blue-900 rounded-full mr-3"
                             whileHover={{ scale: 1.5 }}
                         />
                         {feature}
@@ -67,12 +67,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </ul>
 
             <motion.button
-                className="w-full bg-black text-white py-3 rounded-lg font-semibold relative overflow-hidden"
+                className="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold relative overflow-hidden"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
             >
                 <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-gray-800 to-black"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-900"
                     initial={{ x: '-100%' }}
                     whileHover={{ x: 0 }}
                     transition={{ duration: 0.3 }}

@@ -22,7 +22,7 @@ export const ScrollProgress: React.FC = () => {
             animate={{ scaleX: scrollProgress / 100 }}
             style={{ transformOrigin: '0%' }}
         >
-            <div className="h-full bg-gradient-to-r from-black to-gray-600" />
+            <div className="h-full bg-gradient-to-r from-blue-900 to-blue-600" />
         </motion.div>
     );
 };
