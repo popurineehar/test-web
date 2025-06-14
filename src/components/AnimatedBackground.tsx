@@ -79,7 +79,7 @@ export const AnimatedBackground: React.FC = () => {
                 <div className="relative w-32 h-32 opacity-60">
                     {/* Scale Base */}
                     <motion.div
-                        className="absolute bottom-0 left-1/2 w-2 h-20 bg-gradient-to-t from-blue-300/80 to-blue-200/80 transform -translate-x-1/2 rounded-full"
+                        className="absolute bottom-0 left-1/2 w-2 h-20 bg-gradient-to-t from-white/80 to-white/80 transform -translate-x-1/2 rounded-full"
                         animate={{
                             boxShadow: [
                                 '0 0 10px rgba(59, 130, 246, 0.5)',
@@ -92,7 +92,7 @@ export const AnimatedBackground: React.FC = () => {
 
                     {/* Scale Arms */}
                     <motion.div
-                        className="absolute top-6 left-1/2 w-24 h-px bg-gradient-to-r from-blue-300/80 via-blue-200/80 to-blue-300/80 transform -translate-x-1/2"
+                        className="absolute top-6 left-1/2 w-24 h-px bg-gradient-to-r from-white/80 via-white/80 to-white/80 transform -translate-x-1/2"
                         animate={{
                             boxShadow: [
                                 '0 0 5px rgba(59, 130, 246, 0.6)',
@@ -105,19 +105,19 @@ export const AnimatedBackground: React.FC = () => {
 
                     {/* Scale Pans */}
                     <motion.div
-                        className="absolute top-4 left-3 w-6 h-3 border-2 border-blue-300/80 rounded-b-full bg-blue-400/20"
+                        className="absolute top-4 left-3 w-6 h-3 border-2 border-white/80 rounded-b-full bg-white/20"
                         animate={{ rotateZ: [-2, 2, -2] }}
                         transition={{ duration: 5, repeat: Infinity }}
                     />
                     <motion.div
-                        className="absolute top-4 right-3 w-6 h-3 border-2 border-blue-300/80 rounded-b-full bg-blue-400/20"
+                        className="absolute top-4 right-3 w-6 h-3 border-2 border-white/80 rounded-b-full bg-white/20"
                         animate={{ rotateZ: [2, -2, 2] }}
                         transition={{ duration: 5, repeat: Infinity }}
                     />
 
                     {/* Holographic effect */}
                     <motion.div
-                        className="absolute inset-0 border border-blue-300/30 rounded-full"
+                        className="absolute inset-0 border border-white/30 rounded-full"
                         animate={{
                             scale: [1, 1.2, 1],
                             opacity: [0.3, 0.1, 0.3],
@@ -132,7 +132,7 @@ export const AnimatedBackground: React.FC = () => {
             {[...Array(40)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute w-1 h-1 bg-blue-300/50 rounded-full"
+                    className="absolute w-1 h-1 bg-white/20 rounded-full"
                     initial={{
                         x: Math.random() * window.innerWidth,
                         y: Math.random() * window.innerHeight,
@@ -166,7 +166,7 @@ export const AnimatedBackground: React.FC = () => {
                     animate={{ opacity: 0.5, scale: 1 }}
                     exit={{ opacity: 0, scale: 0 }}
                 >
-                    <div className="w-40 h-40 bg-gradient-radial from-blue-300/50 to-transparent rounded-full blur-2xl" />
+                    <div className="w-40 h-40 bg-gradient-radial from-white/50 to-transparent rounded-full blur-2xl" />
                 </motion.div>
             )}
 

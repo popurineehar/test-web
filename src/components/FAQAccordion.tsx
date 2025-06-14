@@ -4,12 +4,12 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
-        question: 'How accurate is Aupa AI\'s legal research?',
+        question: 'How accurate is Apua AI legal research?',
         answer: 'Our AI is trained on millions of legal documents and case law, achieving 95%+ accuracy in legal research tasks. It continuously learns from new legal precedents and regulations.'
     },
     {
-        question: 'Can Aupa AI replace human lawyers?',
-        answer: 'Aupa AI is designed to augment, not replace, legal professionals. It handles research and document analysis, allowing lawyers to focus on strategy, client relations, and complex legal reasoning.'
+        question: 'Can Apua AI replace human lawyers?',
+        answer: 'Apua AI is designed to augment, not replace, legal professionals. It handles research and document analysis, allowing lawyers to focus on strategy, client relations, and complex legal reasoning.'
     },
     {
         question: 'What types of legal documents can it analyze?',
@@ -48,7 +48,7 @@ export const FAQAccordion: React.FC = () => {
                         className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                         whileHover={{ backgroundColor: '#f9fafb' }}
                     >
-                        <h3 className="text-lg font-semibold text-blue-900 pr-4">
+                        <h3 className="text-lg font-semibold text-black pr-4">
                             {faq.question}
                         </h3>
                         <motion.div
@@ -56,9 +56,9 @@ export const FAQAccordion: React.FC = () => {
                             transition={{ duration: 0.3 }}
                         >
                             {openIndex === index ? (
-                                <Minus className="h-5 w-5 text-blue-900" />
+                                <Minus className="h-5 w-5 text-black" />
                             ) : (
-                                <Plus className="h-5 w-5 text-blue-900" />
+                                <Plus className="h-5 w-5 text-black" />
                             )}
                         </motion.div>
                     </motion.button>

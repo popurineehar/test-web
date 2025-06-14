@@ -84,10 +84,10 @@ function App() {
               className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="text-blue-900">
-                <path d="M256 48C256 48 176 256 48 256C176 256 256 464 256 464C256 464 336 256 464 256C336 256 256 48 256 48Z" fill="#0D47A1" />
+              <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="text-black">
+                <path d="M256 48C256 48 176 256 48 256C176 256 256 464 256 464C256 464 336 256 464 256C336 256 256 48 256 48Z" fill="black" />
               </svg>
-              <span className="ml-2 text-xl font-bold text-blue-900">Aupa AI</span>
+              <span className="ml-2 text-xl font-bold text-black">Apua AI</span>
             </motion.div>
 
             <div className="hidden md:block">
@@ -97,15 +97,15 @@ function App() {
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
                     className={`px-3 py-2 text-sm font-medium transition-colors relative ${activeSection === item.toLowerCase().replace(' ', '-')
-                      ? 'text-blue-900'
-                      : 'text-gray-700 hover:text-blue-900'
+                      ? 'text-black'
+                      : 'text-gray-700 hover:text-black'
                       }`}
                     whileHover={{ y: -2 }}
                   >
                     {item}
                     {activeSection === item.toLowerCase().replace(' ', '-') && (
                       <motion.div
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-900"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-black"
                         layoutId="activeTab"
                       />
                     )}
@@ -114,18 +114,11 @@ function App() {
               </div>
             </div>
 
-            <motion.button
-              className="hidden md:block bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors font-medium"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(30, 58, 138, 0.3)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-            </motion.button>
 
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-900"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-black"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -146,7 +139,7 @@ function App() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-black hover:bg-gray-50 rounded-md"
                 >
                   {item}
                 </button>
@@ -157,7 +150,7 @@ function App() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
+      <section id="home" className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
         <AnimatedBackground />
 
         <motion.div
@@ -172,7 +165,7 @@ function App() {
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <motion.span
-                className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
                 initial={{ letterSpacing: '0.2em' }}
                 animate={{ letterSpacing: '0.05em' }}
                 transition={{ duration: 1.5, delay: 0.5 }}
@@ -191,7 +184,7 @@ function App() {
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -208,17 +201,17 @@ function App() {
               transition={{ duration: 0.8, delay: 1.6 }}
             >
               <motion.button
-                className="bg-white text-blue-900 px-10 py-4 rounded-xl text-lg font-bold hover:bg-blue-50 transition-all duration-300 flex items-center group relative overflow-hidden"
+                className="bg-white text-black px-10 py-4 rounded-xl text-lg font-bold hover:bg-gray-100 transition-all duration-300 flex items-center group relative overflow-hidden"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white"
+                  className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: 0 }}
                   transition={{ duration: 0.3 }}
                 />
-                <span className="relative z-10">Ask AI Lawyer</span>
+                <span className="relative z-10">Apua AI</span>
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
               </motion.button>
             </motion.div>
@@ -246,7 +239,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">AI Legal Solutions</h2>
+            <h2 className="text-5xl md:text-6xl font-black text-black mb-6">AI Legal Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Comprehensive AI-powered tools designed to revolutionize legal research,
               document analysis, and case preparation
@@ -290,7 +283,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-black text-blue-900 mb-6">See AI in Action</h2>
+            <h2 className="text-5xl font-black text-black mb-6">See AI in Action</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the power of AI-driven legal research with our interactive demo
             </p>
@@ -305,7 +298,7 @@ function App() {
           >
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-blue-900 mb-6">
+                <h3 className="text-3xl font-bold text-black mb-6">
                   Intelligent Legal Assistant
                 </h3>
                 <div className="space-y-4">
@@ -322,7 +315,7 @@ function App() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
                         <item.icon className="h-5 w-5 text-white" />
                       </div>
                       <span className="text-gray-700 font-medium">{item.text}</span>
@@ -333,7 +326,7 @@ function App() {
 
               <div className="bg-gray-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
-                  <MessageCircle className="h-6 w-6 text-blue-900 mr-2" />
+                  <MessageCircle className="h-6 w-6 text-black mr-2" />
                   <span className="font-semibold">Try a sample query:</span>
                 </div>
                 <div className="space-y-3">
@@ -344,7 +337,7 @@ function App() {
                   ].map((query, index) => (
                     <motion.button
                       key={index}
-                      className="w-full text-left p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-sm"
+                      className="w-full text-left p-3 bg-white rounded-lg hover:bg-gray-100 transition-colors text-sm"
                       whileHover={{ x: 5 }}
                     >
                       {query}
@@ -358,7 +351,7 @@ function App() {
       </section>
 
       {/* Use Cases Section */}
-      <section id="use-cases" className="py-20 bg-blue-900 text-white">
+      <section id="use-cases" className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -367,7 +360,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl font-black mb-6">Transform Your Practice</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how AI can revolutionize every aspect of your legal work
             </p>
           </motion.div>
@@ -405,30 +398,30 @@ function App() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <div className="bg-white rounded-full p-2 mt-1">
-                    <CheckCircle className="h-4 w-4 text-blue-900" />
+                    <CheckCircle className="h-4 w-4 text-black" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{useCase.title}</h3>
-                    <p className="text-blue-100">{useCase.description}</p>
+                    <p className="text-gray-300">{useCase.description}</p>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-blue-800 to-blue-700 rounded-3xl p-8 border border-blue-600"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
               <h3 className="text-3xl font-bold mb-6">Ready to Transform?</h3>
-              <p className="text-blue-100 mb-8 leading-relaxed">
+              <p className="text-gray-300 mb-8 leading-relaxed">
                 Join thousands of legal professionals who have already revolutionized
-                their practice with Aupa AI. Experience the future of legal work today.
+                their practice with Ask AI Lawyer. Experience the future of legal work today.
               </p>
               <motion.button
-                className="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-colors"
+                className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -448,7 +441,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-black text-blue-900 mb-6">Seamless Integrations</h2>
+            <h2 className="text-5xl font-black text-black mb-6">Seamless Integrations</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Connect with your existing tools and workflows for maximum efficiency
             </p>
@@ -485,13 +478,13 @@ function App() {
                 whileHover={{ y: -5 }}
               >
                 <motion.div
-                  className="text-blue-900 mb-6"
+                  className="text-black mb-6"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   <integration.icon className="h-12 w-12" />
                 </motion.div>
 
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">{integration.title}</h3>
+                <h3 className="text-2xl font-bold text-black mb-4">{integration.title}</h3>
                 <p className="text-gray-600 mb-6">{integration.description}</p>
 
                 <div className="space-y-2">
@@ -503,7 +496,7 @@ function App() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: (index * 0.2) + (idx * 0.1) }}
                     >
-                      <CheckCircle className="h-4 w-4 text-blue-900 mr-2" />
+                      <CheckCircle className="h-4 w-4 text-black mr-2" />
                       {item}
                     </motion.div>
                   ))}
@@ -523,7 +516,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-black text-blue-900 mb-6">Trusted by Legal Professionals</h2>
+            <h2 className="text-5xl font-black text-black mb-6">Trusted by Legal Professionals</h2>
             <p className="text-xl text-gray-600">Real results from real law firms</p>
           </motion.div>
 
@@ -540,8 +533,8 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl font-black text-blue-900 mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Everything you need to know about Aupa AI</p>
+            <h2 className="text-5xl font-black text-black mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600">Everything you need to know about Ask AI Lawyer</p>
           </motion.div>
 
           <FAQAccordion />
@@ -549,7 +542,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-blue-900 text-white">
+      <section id="contact" className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -558,7 +551,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl font-black mb-6">Get Started Today</h2>
-            <p className="text-xl text-blue-100">Ready to revolutionize your legal practice?</p>
+            <p className="text-xl text-gray-300">Ready to revolutionize your legal practice?</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -573,21 +566,21 @@ function App() {
                   <Mail className="h-6 w-6 text-white" />
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-blue-100">hello@aupaai.com</div>
+                    <div className="text-gray-300">hello@apua.ai</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="h-6 w-6 text-white" />
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-blue-100">+1 (555) 123-4567</div>
+                    <div className="text-gray-300">+1 (555) 123-4567</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <MapPin className="h-6 w-6 text-white" />
                   <div>
                     <div className="font-semibold">Address</div>
-                    <div className="text-blue-100">123 Legal Tech Drive, Innovation City, IC 12345</div>
+                    <div className="text-gray-300">123 Legal Tech Drive, Innovation City, IC 12345</div>
                   </div>
                 </div>
               </div>
@@ -602,7 +595,7 @@ function App() {
                     <motion.a
                       key={index}
                       href={social.href}
-                      className="bg-white text-blue-900 p-3 rounded-lg hover:bg-blue-50 transition-colors"
+                      className="bg-white text-black p-3 rounded-lg hover:bg-gray-100 transition-colors"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -614,7 +607,7 @@ function App() {
             </motion.div>
 
             <motion.div
-              className="bg-white rounded-3xl p-8 text-gray-900"
+              className="bg-white rounded-3xl p-8 text-black"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -625,7 +618,7 @@ function App() {
                     <label className="block text-sm font-medium mb-2">First Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                       placeholder="John"
                     />
                   </div>
@@ -633,7 +626,7 @@ function App() {
                     <label className="block text-sm font-medium mb-2">Last Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                       placeholder="Doe"
                     />
                   </div>
@@ -642,7 +635,7 @@ function App() {
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                     placeholder="john@lawfirm.com"
                   />
                 </div>
@@ -650,7 +643,7 @@ function App() {
                   <label className="block text-sm font-medium mb-2">Law Firm</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                     placeholder="Your Law Firm"
                   />
                 </div>
@@ -658,12 +651,12 @@ function App() {
                   <label className="block text-sm font-medium mb-2">Message</label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                     placeholder="Tell us about your legal practice needs..."
                   ></textarea>
                 </div>
                 <motion.button
-                  className="w-full bg-blue-900 text-white py-4 rounded-lg hover:bg-blue-800 transition-colors font-bold"
+                  className="w-full bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition-colors font-bold"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -676,28 +669,26 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-800 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-
                 <div className="p-1 rounded-lg bg-white inline-block">
-                  <svg width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="#0D47A1">
-                    <path d="M256 48C256 48 176 256 48 256C176 256 256 464 256 464C256 464 336 256 464 256C336 256 256 48 256 48Z" fill="#0D47A1" />
+                  <svg width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="text-black">
+                    <path d="M256 48C256 48 176 256 48 256C176 256 256 464 256 464C256 464 336 256 464 256C336 256 256 48 256 48Z" fill="black" />
                   </svg>
                 </div>
-
                 <span className="ml-2 text-xl font-bold">Aupa AI</span>
               </div>
-              <p className="text-blue-100">
+              <p className="text-gray-400">
                 Revolutionizing legal practice through artificial intelligence.
               </p>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2 text-blue-100">
+              <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Legal Research AI</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Document Analyzer</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Case Intelligence</a></li>
@@ -706,7 +697,7 @@ function App() {
 
             <div>
               <h4 className="font-semibold mb-4">Use Cases</h4>
-              <ul className="space-y-2 text-blue-100">
+              <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Litigation Support</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Contract Management</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Due Diligence</a></li>
@@ -716,7 +707,7 @@ function App() {
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-blue-100">
+              <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
@@ -725,7 +716,7 @@ function App() {
             </div>
           </div>
 
-          <div className="border-t border-blue-700 mt-8 pt-8 text-center text-blue-100">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2025 Aupa AI. All rights reserved.</p>
           </div>
         </div>
