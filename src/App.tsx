@@ -29,6 +29,7 @@ import { ScrollProgress } from './components/ScrollProgress';
 import { ProductCard } from './components/ProductCard';
 import { TestimonialCarousel } from './components/TestimonialCarousel';
 import { FAQAccordion } from './components/FAQAccordion';
+import { ApuaIcon } from './Logo';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,9 +85,7 @@ function App() {
               className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="text-black">
-                <path d="M256 48C256 48 176 256 48 256C176 256 256 464 256 464C256 464 336 256 464 256C336 256 256 48 256 48Z" fill="black" />
-              </svg>
+              <ApuaIcon className="w-8 h-8 text-black" />
               <span className="ml-2 text-xl font-bold text-black">Apua AI</span>
             </motion.div>
 
@@ -194,8 +193,28 @@ function App() {
               and instant access to comprehensive legal insights.
             </motion.p>
 
+            {/* NVIDIA Card Inserted Here */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex justify-center mt-6 mb-20"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+            >
+              <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 flex items-center gap-4 shadow-md w-fit">
+                <img
+                  src="/test-web/nvidia-logo.svg"
+                  alt="NVIDIA"
+                  className="h-10 w-10"
+                />
+                <div className="text-left">
+                  <p className="text-white text-lg ">Member of NVIDIA</p>
+                  <p className="text-white/60 text-sm ">Inception Program</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center "
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.6 }}
@@ -674,11 +693,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <div className="p-1 rounded-lg bg-white inline-block">
-                  <svg width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="text-black">
-                    <path d="M256 48C256 48 176 256 48 256C176 256 256 464 256 464C256 464 336 256 464 256C336 256 256 48 256 48Z" fill="black" />
-                  </svg>
-                </div>
+                <ApuaIcon className="w-12 h-12 text-black" />
                 <span className="ml-2 text-xl font-bold">Aupa AI</span>
               </div>
               <p className="text-gray-400">
