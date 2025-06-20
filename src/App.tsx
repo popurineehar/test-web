@@ -27,9 +27,9 @@ import { AnimatedBackground } from './components/AnimatedBackground';
 import { ChatDemo } from './components/ChatDemo';
 import { ScrollProgress } from './components/ScrollProgress';
 import { ProductCard } from './components/ProductCard';
-import { TestimonialCarousel } from './components/TestimonialCarousel';
-import { FAQAccordion } from './components/FAQAccordion';
+import { FaqAccordion } from './components/FAQAccordion';
 import { ApuaIcon } from './Logo';
+import Testimonials from './components/TestimonialCarousel';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -527,21 +527,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-5xl font-black text-black mb-6">Trusted by Legal Professionals</h2>
-            <p className="text-xl text-gray-600">Real results from real law firms</p>
-          </motion.div>
-
-          <TestimonialCarousel />
-        </div>
-      </section>
+      <Testimonials />
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-white">
@@ -556,7 +542,37 @@ function App() {
             <p className="text-xl text-gray-600">Everything you need to know about Ask AI Lawyer</p>
           </motion.div>
 
-          <FAQAccordion />
+          <FaqAccordion
+            data={[
+              {
+                id: 1,
+                question: 'How accurate is Apua AI legal research?',
+                answer: 'Our AI is trained on millions of legal documents and case law, achieving 95%+ accuracy in legal research tasks. It continuously learns from new legal precedents and regulations.'
+              },
+              {
+                id: 2,
+                question: 'Can Apua AI replace human lawyers?',
+                answer: 'Apua AI is designed to augment, not replace, legal professionals. It handles research and document analysis, allowing lawyers to focus on strategy, client relations, and complex legal reasoning.'
+              },
+              {
+                id: 3,
+                question: 'What types of legal documents can it analyze?',
+                answer: 'Our AI can analyze contracts, case briefs, legal opinions, statutes, regulations, and more. It supports multiple jurisdictions and practice areas including corporate law, litigation, and compliance.'
+              },
+              {
+                id: 4,
+                question: 'How secure is my data?',
+                answer: 'We use enterprise-grade encryption and comply with all major data protection regulations. Your legal documents are processed securely and never stored permanently on our servers.'
+              },
+              {
+                id: 5,
+                question: 'How quickly can I get results?',
+                answer: 'Most legal research queries are completed within seconds to minutes, depending on complexity. Document analysis typically takes 1-5 minutes for comprehensive reports.'
+              }
+            ]}
+
+            className="max-w-[700px]"
+          />
         </div>
       </section>
 
